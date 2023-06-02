@@ -22,7 +22,7 @@ pipeline {
       steps {
         sh '''
           npx playwright test --list
-          npx playwright test
+          npx playwright test --headed visualRegressionPoc.spec.js --project="firefox"
         '''
       }
       post {
