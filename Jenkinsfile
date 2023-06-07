@@ -17,5 +17,11 @@ pipeline {
             sh 'npx playwright test --headed visualRegressionPoc.spec.js --project="firefox"'
          }
       }
+
+      post {
+        success {
+          archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
+          sh 'rm -rf *.png'
+        }
    }
 }

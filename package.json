@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    
+
   },
-  "scripts": {},
+  "scripts": {
+    "test": "tests",
+    "allVisualTest": "npx playwright test --headed visualRegressionPoc.spec.js --project=firefox"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
