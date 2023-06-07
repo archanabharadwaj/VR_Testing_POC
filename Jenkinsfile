@@ -4,7 +4,6 @@ pipeline {
       stage('test') {
          steps {
             // Depends on your language / test framework
-            sh 'docker version'
             sh 'npm install'
             sh 'npx playwright test --headed visualRegressionPoc.spec.js --project="firefox"'
 
