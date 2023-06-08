@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    
-
+  
   },
   "scripts": {
     "test": "tests",
