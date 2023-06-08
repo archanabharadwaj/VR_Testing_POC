@@ -22,13 +22,12 @@ pipeline {
          steps {
          post {
          success {
-          publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, 
-          keepAll: true, reportDir: 'target/site', reportFiles: 'my-report.html', 
-          reportName: 'Visual_Regression_Report', reportTitles: '', useWrapperFileDirectly: true])
+          publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, 
+          keepAll: false, reportDir: 'VR_Testing_POC/my-report/', reportFiles: 'index.html',
+         reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
       }
       }
-      }
-        
+      }     
    }
 }
