@@ -19,7 +19,9 @@ pipeline {
       }
 
        stage('Report'){
-         steps{
+         steps {
+                echo "HTML-REPORT"
+            }
          post {
          always {
                 archive (includes: 'pkg/*.gem')
@@ -35,5 +37,5 @@ pipeline {
       }
        }  
        }
-   }
+   
 }
