@@ -18,9 +18,9 @@ pipeline {
          }
       }
 
-       
+       stage('Report'){
          post {
-         success {
+         always {
                 archive (includes: 'pkg/*.gem')
                 publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: false,
@@ -32,6 +32,6 @@ pipeline {
                 useWrapperFileDirectly: true])
                }
       }
-         
+       }  
    }
 }
