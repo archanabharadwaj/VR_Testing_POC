@@ -19,12 +19,12 @@ pipeline {
       }
 
        stage('HTML-Report') {
+
+
          steps {
          post {
          success {
-          publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, 
-          keepAll: false, reportDir: 'VR_Testing_POC/my-report/', reportFiles: 'index.html',
-         reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+         archiveArtifacts artifacts: 'VR_Testing_POC/my-report/index.html', followSymlinks: false
         }
       }
       }
