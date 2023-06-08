@@ -17,6 +17,18 @@ pipeline {
             sh 'npx playwright test --headed visualRegressionPoc.spec.js --project="firefox"'
          }
       }
+
+       stage('HTML-Report') {
+         steps {
+         post {
+         success {
+          publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, 
+          keepAll: true, reportDir: 'target/site', reportFiles: 'my-report.html', 
+          reportName: 'Visual_Regression_Report', reportTitles: '', useWrapperFileDirectly: true])
+        }
+      }
+      }
+      }
         
    }
 }
