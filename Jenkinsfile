@@ -18,19 +18,20 @@ pipeline {
          }
       }
 
-       stage('HTML-Report') {
-         steps {
+       
          post {
-         success {publishHTML (target : [allowMissing: true,
-                  alwaysLinkToLastBuild: true,
-                  keepAll: true,
-                  reportDir: 'reports',
-                  reportFiles: 'index.html',
-                  reportName: 'my-report',
-                  reportTitles: 'The Report'])
+         success {
+                archive (includes: 'pkg/*.gem')
+                publishHTML([allowMissing: false, 
+                alwaysLinkToLastBuild: false,
+                keepAll: false,
+                reportDir: 'my-report',
+                reportFiles: 'index.html',
+                reportName: 'VR_testint_Report',
+                reportTitles: '', 
+                useWrapperFileDirectly: true])
                }
       }
-      }
-      }     
+         
    }
 }
