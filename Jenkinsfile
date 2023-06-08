@@ -21,12 +21,12 @@ pipeline {
        stage('HTML-Report') {
          steps {
          post {
-         success {publishHTML (target : [allowMissing: false,
+         success {publishHTML (target : [allowMissing: true,
                   alwaysLinkToLastBuild: true,
                   keepAll: true,
                   reportDir: 'reports',
-                  reportFiles: 'myreport.html',
-                  reportName: 'My Reports',
+                  reportFiles: 'index.html',
+                  reportName: 'my-report',
                   reportTitles: 'The Report'])
                }
       }
