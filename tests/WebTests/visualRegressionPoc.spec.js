@@ -11,7 +11,6 @@ test.describe('Visual_Testing @web', () => {
   for (let index = 0; index < data.length; index++) {
     test(data[index].info, async ({page}) => {
     const visualTesting = new visualRegPoc(page);
-    console.log(data[index])
     await visualTesting.startVisualTest(data[index]);
     });
   }

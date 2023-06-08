@@ -1,5 +1,4 @@
 const { expect,test } = require("@playwright/test")
-//require('dotenv').config()
 const  visualRegressionData  =    require('../../data/VisualRegressionData.json');
 
 exports.visualRegPoc = class visualRegPoc {
