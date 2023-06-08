@@ -19,6 +19,7 @@ pipeline {
       }
 
        stage('Report'){
+         steps{
          post {
          always {
                 archive (includes: 'pkg/*.gem')
@@ -33,5 +34,6 @@ pipeline {
                }
       }
        }  
+       }
    }
 }
