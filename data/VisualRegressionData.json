@@ -18,15 +18,6 @@
         "Url": "https://www.w3schools.com/html/default.asp",
         "maskDetails": ["this.page.locator('#adngin-main_leaderboard-0')","this.page.locator('#adngin-sidebar_top-0')"],
         "delay":5000
-    },
-    {
-        "info":"CNA",
-        "Url": "https://www.channelnewsasia.com/international",
-        "maskDetails": ["this.page.locator('#block-leaderboard01article-2')","this.page.locator('#ad-desktop-imu1-1')"],
-        "delay":0
-
     }
-   
-
 ]    
 }
