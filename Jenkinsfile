@@ -19,13 +19,16 @@ pipeline {
       }
 
        stage('HTML-Report') {
-
-
          steps {
          post {
-         success {
-         archiveArtifacts artifacts: 'VR_Testing_POC/my-report/index.html', followSymlinks: false
-        }
+         success {publishHTML (target : [allowMissing: false,
+                  alwaysLinkToLastBuild: true,
+                  keepAll: true,
+                  reportDir: 'reports',
+                  reportFiles: 'myreport.html',
+                  reportName: 'My Reports',
+                  reportTitles: 'The Report'])
+               }
       }
       }
       }     
