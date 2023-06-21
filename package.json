@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-  
-  },
+  "directories": {},
   "scripts": {
     "test": "tests",
     "allVisualTest": "npx playwright test --headed visualRegressionPoc.spec.js --project=firefox"
@@ -14,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.34.3"
+    "@playwright/test": "^1.35.1"
   }
 }

@@ -15,6 +15,15 @@ exports.visualRegPoc = class visualRegPoc {
             let maskArray = data.maskDetails.map((el)=>{
             return eval(el);
             })
+            if(data.clickSequence.length){
+            let clickSequence = data.clickSequence;
+            for (let clickIndex = 0; clickIndex < clickSequence.length; clickIndex++) {
+                   await eval(clickSequence[clickIndex].clickLocator).click();
+                   if(clickSequence[clickIndex].waitPostClick !=0){
+                    await this.page.waitForTimeout(clickSequence[clickIndex].waitPostClick)
+                }       
+             } 
+            }
             if(data.delay !=0){
             await this.page.waitForTimeout(data.delay);
             }

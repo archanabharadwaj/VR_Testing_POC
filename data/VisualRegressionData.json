@@ -1,31 +1,52 @@
 {
     "data":[
-       {
-            "info":"random-picture-generator",
-            "Url": "https://randomwordgenerator.com/picture.php",
-            "maskDetails": ["this.page.locator('#RWG_Top_Banner_Desktop_970px')","this.page.locator('#loading_result')"],
-            "delay":0
+      
+        {
+            "info":"Vagisil_Buy_Online",
+            "Url": "https://www.vagisil.com/where-to-buy",
+            "maskDetails": ["this.page.getByRole('paragraph').filter({ hasText: 'Where to Buy' })"],
+            "delay":0,
+            "clickSequence": []
         },
         {
-            "info":"random-sentence-generator",
-            "Url": "https://randomwordgenerator.com/sentence.php",
-            "maskDetails": ["this.page.locator('#RWG_Top_Banner_Desktop_970px')","this.page.locator('#loading_result')"],
-            "delay":0
-    
+            "info":"Vagisil_In_Store",
+            "Url": "https://www.vagisil.com/where-to-buy",
+            "maskDetails": ["this.page.getByRole('paragraph').filter({ hasText: 'Where to Buy' })"],
+            "delay":0,
+            "clickSequence": [{
+                "clickLocator":"this.page.getByRole('link', { name: 'In store' })",
+                "waitPostClick":5000           
+            }
+        ]
         },
         {
             "info":"W3S",
             "Url": "https://www.w3schools.com/html/default.asp",
             "maskDetails": ["this.page.locator('#adngin-main_leaderboard-0')","this.page.locator('#adngin-sidebar_top-0')"],
-            "delay":5000
+            "delay":5000,
+            "clickSequence":[]
+        },
+        {
+            "info":"random-picture-generator",
+            "Url": "https://randomwordgenerator.com/picture.php",
+            "maskDetails": ["this.page.locator('#RWG_Top_Banner_Desktop_970px')","this.page.locator('#loading_result')"],
+            "delay":0,
+            "clickSequence":[]
+        },
+        {
+            "info":"random-sentence-generator",
+            "Url": "https://randomwordgenerator.com/sentence.php",
+            "maskDetails": ["this.page.locator('#RWG_Top_Banner_Desktop_970px')","this.page.locator('#loading_result')"],
+            "delay":0,
+            "clickSequence":[]
         },
         {
             "info":"CNA",
             "Url": "https://www.channelnewsasia.com/international",
             "maskDetails": ["this.page.locator('#block-leaderboard01article-2')","this.page.locator('#ad-desktop-imu1-1')"],
-            "delay":0
-    
+            "delay":0,
+            "clickSequence":[]
         }
     ]    
     }
-    
+  
